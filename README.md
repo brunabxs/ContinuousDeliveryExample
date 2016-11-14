@@ -1,5 +1,5 @@
 # GitHubTravisAwsEcsDockerExample
-![](https://travis-ci.org/brunabxs/GitHubTravisAwsEcsDockerExample.svg?branch=master "Travis CI build status")
+![](https://travis-ci.org/brunabxs/ContinuousDeliveryExample.svg?branch=master "Travis CI build status")
 
 This project shows an example of continuous deployment with GitHub, Travis CI, Amazon EC2 Container Service (ECS) and Docker.
 
