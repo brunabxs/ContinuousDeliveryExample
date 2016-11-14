@@ -1,0 +1,26 @@
+{
+  "name": "github_travis_awsecs_docker_example",
+  "version": "1.0.0",
+  "description": "This project shows an example of continuous deployment with GitHub, Travis CI, Amazon EC2 Container Service (ECS) and Docker.",
+  "devDependencies": {
+    "jasmine-node": "^1.14.5"
+  },
+  "main": "server.js",
+  "scripts": {
+    "test": "./node_modules/.bin/jasmine-node spec",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunabxs/GitHubTravisAwsEcsDockerExample.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "brunbxs (brunabxsantos@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brunabxs/GitHubTravisAwsEcsDockerExample/issues"
+  },
+  "homepage": "https://github.com/brunabxs/GitHubTravisAwsEcsDockerExample#readme"
+}
