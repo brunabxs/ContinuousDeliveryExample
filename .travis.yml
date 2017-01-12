@@ -14,4 +14,5 @@ after_success:
   - docker build -t example:$TRAVIS_BUILD_NUMBER . 
   - docker tag example:$TRAVIS_BUILD_NUMBER 327426269989.dkr.ecr.us-east-1.amazonaws.com/example:$TRAVIS_BUILD_NUMBER
   - docker push 327426269989.dkr.ecr.us-east-1.amazonaws.com/example:$TRAVIS_BUILD_NUMBER
-  - eval $(sed -e ':a;N;$!ba;s/\n/ /g' -e 's/"/\\"/g' -e 's/@@/\"/g' container-definitions.json)
+  - eval $(sed -e ':a;N;$!ba;s/\n/ /g' -e 's/"/\\"/g' -e 's/@@/\"/g' container-definitions.json) > out
+  - rm out
