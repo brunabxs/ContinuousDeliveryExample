@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brunabxs/GitHubTravisAwsEcsDockerExample.git"
+    "url": "git+https://github.com/brunabxs/ContinuousDeliveryExample.git"
   },
   "keywords": [
     "nodejs"
@@ -20,7 +20,7 @@
   "author": "brunbxs (brunabxsantos@gmail.com)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/brunabxs/GitHubTravisAwsEcsDockerExample/issues"
+    "url": "https://github.com/brunabxs/ContinuousDeliveryExample/issues"
   },
-  "homepage": "https://github.com/brunabxs/GitHubTravisAwsEcsDockerExample#readme"
+  "homepage": "https://github.com/brunabxs/ContinuousDeliveryExample#readme"
 }

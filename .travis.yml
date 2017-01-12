@@ -12,5 +12,6 @@ after_success:
   - export PATH=$PATH:$HOME/.local/bin
   - eval $(aws ecr get-login --region us-east-1)
   - docker build -t example .
-  - docker tag example:latest 327426269989.dkr.ecr.us-east-1.amazonaws.com/example:latest
-  - docker push 327426269989.dkr.ecr.us-east-1.amazonaws.com/example:latest
+  - docker tag example:$TRAVIS_BUILD_NUMBER 327426269989.dkr.ecr.us-east-1.amazonaws.com/example:$TRAVIS_BUILD_NUMBER
+  - docker push 327426269989.dkr.ecr.us-east-1.amazonaws.com/example:$TRAVIS_BUILD_NUMBER
+  - eval $(sed -e ':a;N;$!ba;s/\n/ /g' -e 's/"/\\"/g' -e 's/@@/\"/g' container-definitions.json)
