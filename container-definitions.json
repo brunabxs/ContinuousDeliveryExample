@@ -1,30 +1,23 @@
-aws ecs register-task-definition --family untach-new --container-definitions
+aws ecs register-task-definition --family untach-new --network-mode bridge --container-definitions
 @@[{
-    "family": "untach-new",
-    "networkMode": "bridge",
-    "containerDefinitions": [
-        {
-            "name": "container",
-            "image": "327426269989.dkr.ecr.us-east-1.amazonaws.com/example:$TRAVIS_BUILD_NUMBER",
-            "cpu": 0,
-            "memory": 128,
-            "portMappings": [
-                {
-                    "containerPort": 80,
-                    "hostPort": 8080,
-                    "protocol": "tcp"
-                }
-            ],
-            "essential": true,
-            "environment": [
-                {
-                    "name": "ENV_VARIABLE",
-                    "value": "$ENV_VARIABLE"
-                }
-            ],
-            "mountPoints": [],
-            "volumesFrom": []
-        }
-    ],
-    "volumes": []
+	"name": "container",
+	"image": "327426269989.dkr.ecr.us-east-1.amazonaws.com/example:$TRAVIS_BUILD_NUMBER",
+	"cpu": 0,
+	"memory": 128,
+	"portMappings": [
+		{
+			"containerPort": 80,
+			"hostPort": 8080,
+			"protocol": "tcp"
+		}
+	],
+	"essential": true,
+	"environment": [
+		{
+			"name": "ENV_VARIABLE",
+			"value": "$ENV_VARIABLE"
+		}
+	],
+	"mountPoints": [],
+	"volumesFrom": []
 }]@@
